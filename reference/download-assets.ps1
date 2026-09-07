@@ -1,0 +1,6 @@
+curl.exe -L 'https://framerusercontent.com/images/0TkAzGmNLsUjGlAB1IXS47xdE4s.png?width=896&height=1280' -o 'public/assets/images/testimonial-overshirt.png' --silent --show-error
+curl.exe -L 'https://framerusercontent.com/images/np97j2F8KUZ2HLiullJ6eZCAlsQ.png?width=303&height=67' -o 'public/assets/images/testimonial-logo-manila.png' --silent --show-error
+curl.exe -L 'https://framerusercontent.com/images/kC9LqRR3BtIxbSgbozSBAmYnTM.png?width=1024&height=1024' -o 'public/assets/images/testimonial-gracia.png' --silent --show-error
+curl.exe -L 'https://framerusercontent.com/images/NZLIdp567TgymMJ9pqxk1BvJfxA.png?width=880&height=1184' -o 'public/assets/images/testimonial-woman.png' --silent --show-error
+curl.exe -L 'https://framerusercontent.com/images/f0y1IAXP7xxPZoecHyx9XHFdiHA.png?width=258&height=66' -o 'public/assets/images/testimonial-logo-basel.png' --silent --show-error
+curl.exe -L 'https://framerusercontent.com/images/MKS4w7LuuNY3nisTDBuNigHhGqs.png?width=1024&height=1024' -o 'public/assets/images/testimonial-team.png' --silent --show-error

@@ -1,0 +1,40 @@
+/* Native interaction layer. Geometry and type scales live in reference.css. */
+.site-header { width:100%; height:72px; padding:24px; position:relative; color:white; transition:background-color .3s; }
+.site-header.is-open { background:#111; height:263px; box-shadow:0 22px 40px 20px #0008; }
+.menu-toggle { width:24px; height:24px; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:8px; cursor:pointer; background:none; border:0; padding:0; color:inherit; }
+.menu-toggle span { display:block; width:18px; height:2px; background:currentColor; }
+.site-header nav { position:absolute; top:88px; width:342px; max-width:calc(100% - 48px); left:50%; transform:translateX(-50%); }
+.site-header nav a { display:block; padding:4px 0 10px; margin-bottom:10px; border-bottom:1px solid #ffffff29; color:#fff8; font:1000 12px/16.2px 'BDO Grotesk Variable',sans-serif; letter-spacing:-.48px; text-decoration:none; }
+.site-header nav a:hover { color:white; }
+.site-header sup { margin-left:12px; font-size:10px; position:relative; top:-5px; }
+.line-link .framer-1holemv { transition:transform .35s cubic-bezier(.44,0,.34,.98); }
+.line-link:hover .framer-1holemv { transform:rotate(45deg) translateY(-18px)!important; }
+.line-link .framer-w1qwlz { transform-origin:right; transition:transform .4s; }
+.line-link:hover .framer-w1qwlz { transform:scaleX(.8); }
+a { cursor:pointer; }
+.ticker { overflow:hidden; }
+.ticker-track { display:flex; width:max-content; animation:ticker-move 28s linear infinite; }
+.ticker-track ul { display:flex; align-items:center; list-style:none; gap:10px; margin:0; padding:0 10px 0 0; flex-shrink:0; }
+.ticker-track li { flex-shrink:0; }
+.ticker:hover .ticker-track { animation-play-state:paused; }
+@keyframes ticker-move { to { transform:translateX(-25%); } }
+.faq-list { width:100%; }
+.faq-item { border-bottom:1px solid #00000029; }
+.faq-item button { display:flex; align-items:center; justify-content:space-between; width:100%; gap:20px; padding:28px 0 40px; background:none; border:0; color:black; text-align:left; font:1000 16px/20.203125px 'BDO Grotesk Variable',sans-serif; letter-spacing:-.64px; cursor:pointer; }
+.faq-item p { max-width:569px; padding:0 0 40px; margin:0; color:#0008; font:400 12px/16.2px 'BDO Grotesk Variable',sans-serif; letter-spacing:-.48px; }
+.faq-plus { width:16px; height:16px; position:relative; flex-shrink:0; }
+.faq-plus::before,.faq-plus::after { content:''; position:absolute; background:currentColor; transition:transform .4s; }
+.faq-plus::before { width:2px; height:16px; top:0; left:7px; }
+.faq-plus::after { height:2px; width:16px; top:7px; left:0; }
+.faq-plus.is-open::before { transform:rotate(90deg); }
+.testimonial-image { position:relative; overflow:hidden; border-radius:5px; }
+.testimonial-image>img { position:absolute; width:100%; height:100%; object-fit:cover; inset:0; }
+.testimonial-image>.testimonial-logo { width:76px; height:16px; object-fit:contain; inset:50% auto auto 50%; transform:translate(-50%,-50%); }
+.testimonial-arrow { border:0; border-radius:5px; background:#f7f7f7; cursor:pointer; transition:background .2s; }
+.testimonial-arrow:hover { background:#e5e5e5; }
+.testimonial-user { background:#f7f7f7; border-radius:5px; }
+.testimonial-user .framer-rgtkst { border-radius:2.5px; overflow:hidden; }
+.testimonial-user .framer-rgtkst img { width:100%; height:100%; object-fit:cover; }
+.testimonial-role { --framer-text-color:rgba(0,0,0,.5); color:rgba(0,0,0,.5); }
+@media(max-width:809.98px) { .faq-item button { font-size:16px; } }
+@media(prefers-reduced-motion:reduce) { .ticker-track { animation:none; } *,*::before,*::after { scroll-behavior:auto!important; } }

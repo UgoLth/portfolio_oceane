@@ -1,0 +1,7 @@
+const {chromium}=require('playwright');const fs=require('fs');
+(async()=>{const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});const p=await b.newPage({viewport:{width:1920,height:1020}});await p.goto('https://diverse-heart-427907.framer.app/',{waitUntil:'domcontentloaded'});await p.waitForTimeout(3000);const output=[];
+for(const y of [800,1650,2500,3350,4200,9300]){await p.evaluate(y=>scrollTo(0,y),y);await p.waitForTimeout(1200);output.push({y,values:await p.locator('.framer-h999cq-container,.framer-mx4880-container,.framer-k3wp9w-container,.framer-1heqfqb-container,.framer-5593zm,.framer-facib3').evaluateAll(es=>es.map(e=>({class:e.className,style:e.getAttribute('style'),rect:e.getBoundingClientRect().toJSON()})))});}
+fs.writeFileSync('reference/motion-audit.json',JSON.stringify(output,null,2));
+await p.evaluate(()=>scrollTo(0,7550));await p.waitForTimeout(1200);const slides=[];
+for(let i=0;i<3;i++){const el=p.locator('.framer-EbrCn').first();slides.push(await el.evaluate(e=>({text:e.innerText,images:[...e.querySelectorAll('img')].map(x=>({src:x.src,alt:x.alt})),class:e.className})));await p.screenshot({path:`reference/testimonial-${i}.png`});await el.locator('.framer-1f4818y').click();await p.waitForTimeout(1400);}
+fs.writeFileSync('reference/motion-audit.json',JSON.stringify(output,null,2));fs.writeFileSync('reference/testimonials.json',JSON.stringify(slides,null,2));console.log(JSON.stringify(slides,null,2));await b.close();})();

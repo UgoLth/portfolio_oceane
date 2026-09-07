@@ -1,0 +1,2 @@
+const fs=require('fs');const slides=require('./testimonials.json');const names=[['testimonial-overshirt.png','testimonial-logo-manila.png','testimonial-gracia.png'],['testimonial-woman.png','testimonial-logo-basel.png','testimonial-team.png']];
+fs.writeFileSync('reference/download-assets.ps1',slides.slice(1).flatMap((slide,i)=>slide.images.map((image,j)=>`curl.exe -L '${image.src}' -o 'public/assets/images/${names[i][j]}' --silent --show-error`)).join('\n'));
