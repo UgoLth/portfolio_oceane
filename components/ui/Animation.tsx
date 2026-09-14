@@ -9,7 +9,7 @@ type ElementProps = {
   className?: string;
   style?: CSSProperties;
   id?: string;
-  as?: 'div' | 'section' | 'header' | 'a' | 'footer';
+  as?: 'div' | 'section' | 'header' | 'a' | 'footer' | 'figure' | 'dl';
 };
 
 export function Reveal({ as = 'div', fromY = 0, fromScale = 1, style, ...props }: ElementProps & {fromY?: number; fromScale?: number}) {
@@ -86,9 +86,9 @@ function RevealLine({line,reduced,scrollDriven,progress,index,count}:{line:strin
     variants={scrollDriven?undefined:{hidden:{y:reduced?0:70},visible:{y:0,transition:{duration:.7,ease:easing}}}}>{line}</motion.span>;
 }
 
-export function Ticker({children, style}: {children:ReactNode;style?:CSSProperties}) {
+export function Ticker({children, style, ariaLabel='Contenu défilant'}: {children:ReactNode;style?:CSSProperties;ariaLabel?:string}) {
   const items=Children.toArray(children);
-  return <section className="ticker" style={style} aria-label="Selected clients"><div className="ticker-track">
+  return <section className="ticker" style={style} aria-label={ariaLabel}><div className="ticker-track">
     {[0,1,2,3].map(copy=><ul key={copy} aria-hidden={copy>0 || undefined}>{items}</ul>)}
   </div></section>;
 }

@@ -9,7 +9,7 @@ export const faqItems = [
   },
   {
     "question": "Quels outils est-ce que j’utilise ?",
-    "answer": "J’utilise notamment Lectra, Photoshop, Canva et CapCut. J’explore aussi CLO3D, la retouche et la création de supports techniques."
+    "answer": "J’utilise Photoshop, Illustrator, CLO3D, Lectra, Modaris, Canva et CapCut, ainsi que des outils de retouche et de création de supports techniques."
   },
   {
     "question": "Quels univers nourrissent mon travail ?",

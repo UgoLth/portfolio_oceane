@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { FeaturedProjectPage } from '../../../components/projects/FeaturedProjectPage';
 import { ProjectShowcase } from '../../../components/projects/ProjectShowcase';
+import { featuredProjects, getFeaturedProject } from '../../../data/featured-projects';
 import { getProject, projects } from '../../../data/projects';
 
 type ProjectPageProps = {
@@ -9,12 +11,12 @@ type ProjectPageProps = {
 };
 
 export function generateStaticParams() {
-  return projects.map(({ slug }) => ({ slug }));
+  return [...projects, ...featuredProjects].map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProject(slug);
+  const project = getFeaturedProject(slug) ?? getProject(slug);
 
   return project
     ? {
@@ -26,8 +28,13 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-  const project = getProject(slug);
+  const featuredProject = getFeaturedProject(slug);
 
+  if (featuredProject) {
+    return <FeaturedProjectPage project={featuredProject} />;
+  }
+
+  const project = getProject(slug);
   if (!project) notFound();
 
   const currentIndex = projects.findIndex((item) => item.slug === project.slug);
