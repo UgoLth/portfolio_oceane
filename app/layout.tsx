@@ -4,11 +4,11 @@ import './reference.css';
 import './interactions.css';
 
 export const metadata: Metadata = {
-  title: 'Fuel - Premium Agency & Portfolio',
-  description: 'Fuel, a premium agency framer template, is a perfect fit for designers, freelancers, agencies, and photographers.',
+  title: 'Océane Lemaître — Portfolio Mode',
+  description: 'Portfolio d’Océane Lemaître, étudiante en stylisme et modélisme à ESMOD Roubaix.',
   icons: { icon: '/assets/images/f0EhgXWunWZsCvCzDGy44b0jj6Y.png' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="fr"><body>{children}</body></html>;
 }

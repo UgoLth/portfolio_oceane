@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { WordReveal } from './Animation';
 
 const slides = [
-  { quote:'“Fuel delivered with clarity. Their structured workflow and fast turnaround made our redesign launch seamless. They’ve become our trusted partner for every major creative push.”',name:'Adrian Velasco',role:'NovaLabs / Creative Lead',image:'man-hoodie.png',logo:'image-20.svg',portrait:'women-side-pose-512.png',projects:'122+',satisfaction:'99%' },
-  { quote:'“The team understood our vision instantly. Clean replies, flexible timelines, and consistently refined work with punch. Fuel gave our brand the modern edge we were missing.”',name:'Gracia Michelle',role:'Apple Co. / Senior Lead Engineer',image:'testimonial-overshirt.png',logo:'testimonial-logo-manila.png',portrait:'testimonial-gracia.png',projects:'257+',satisfaction:'84%' },
-  { quote:'“Professional, thoughtful, and incredibly detail-driven. Fuel supported us through multiple product rollouts with steady direction and polished execution. Highly dependable every time.”',name:'Kasandra, Leon, Miles',role:'Miro One / Team Lead Members',image:'testimonial-woman.png',logo:'testimonial-logo-basel.png',portrait:'testimonial-team.png',projects:'315+',satisfaction:'94%' },
+  { quote:'inutile',name:'inutile',role:'inutile',image:'man-hoodie.png',logo:'image-20.svg',portrait:'women-side-pose-512.png',projects:'inutile',satisfaction:'inutile' },
+  { quote:'inutile',name:'inutile',role:'inutile',image:'testimonial-overshirt.png',logo:'testimonial-logo-manila.png',portrait:'testimonial-gracia.png',projects:'inutile',satisfaction:'inutile' },
+  { quote:'inutile',name:'inutile',role:'inutile',image:'testimonial-woman.png',logo:'testimonial-logo-basel.png',portrait:'testimonial-team.png',projects:'inutile',satisfaction:'inutile' },
 ];
 
 export function TestimonialCarousel({className}:{className:string}) {
@@ -17,15 +17,15 @@ export function TestimonialCarousel({className}:{className:string}) {
   const tablet=className.includes('framer-v-1xvwr45');
   const fontSize=small?30:tablet?38:56;
   const go=(direction:number)=>setIndex((index+direction+slides.length)%slides.length);
-  return <div className={className+' native-testimonial'} style={{width:'100%'}} aria-roledescription="carousel" aria-label="Client testimonials">
+  return <div className={className+' native-testimonial'} style={{width:'100%'}} aria-roledescription="carousel" aria-label="Contenu inutile">
     <div className="framer-u2xp06">
       {!small&&<div className="framer-x2rok7 testimonial-image">
         <AnimatePresence initial={false}><motion.img key={slide.image} src={'/assets/images/'+slide.image} alt={index===0?'Man Hoodie':index===1?'Man Overshirt':'Woman'} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.5}} /></AnimatePresence>
         <img className="testimonial-logo" src={'/assets/images/'+slide.logo} alt="" />
       </div>}
       <div className="framer-f0yedb">
-        <button className="framer-p52sbr testimonial-arrow" type="button" aria-label="Previous testimonial" onClick={()=>go(-1)}><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="m7 1-6 6 6 6" stroke="currentColor" strokeWidth="1.8" /></svg></button>
-        <button className="framer-1f4818y testimonial-arrow" type="button" aria-label="Next testimonial" onClick={()=>go(1)}><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="m1 1 6 6-6 6" stroke="currentColor" strokeWidth="1.8" /></svg></button>
+        <button className="framer-p52sbr testimonial-arrow" type="button" aria-label="Précédent" onClick={()=>go(-1)}><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="m7 1-6 6 6 6" stroke="currentColor" strokeWidth="1.8" /></svg></button>
+        <button className="framer-1f4818y testimonial-arrow" type="button" aria-label="Suivant" onClick={()=>go(1)}><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="m1 1 6 6-6 6" stroke="currentColor" strokeWidth="1.8" /></svg></button>
       </div>
     </div>
     <div className="framer-x3rwi6">
@@ -38,8 +38,8 @@ export function TestimonialCarousel({className}:{className:string}) {
           <div className="framer-rgtkst"><motion.img key={slide.portrait} src={'/assets/images/'+slide.portrait} alt="" initial={{scale:1.25}} animate={{scale:1}} transition={{duration:.7}} /></div>
           <div className="framer-1pr9s5y"><div className="framer-1bycjc0"><p className="framer-text framer-styles-preset-q70fzl">{slide.name}</p><p className="framer-text framer-styles-preset-152twjm testimonial-role">{slide.role}</p></div></div>
         </div>
-        <TestimonialStat value={slide.projects} label="Success Rate" detail="Reliable execution" className="framer-1ltnmqs" />
-        <TestimonialStat value={slide.satisfaction} label="Client Satisfaction" detail="Seamless delivery" className="framer-vwbrfv" />
+        <TestimonialStat value={slide.projects} label="inutile" detail="inutile" className="framer-1ltnmqs" />
+        <TestimonialStat value={slide.satisfaction} label="inutile" detail="inutile" className="framer-vwbrfv" />
       </div>
     </div>
   </div>;

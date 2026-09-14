@@ -1,22 +1,22 @@
 export const faqItems = [
   {
-    "question": "What distinguishes us from other agencies?",
-    "answer": "Fuel blends structured design with purposeful clarity, moving beyond surface visuals to create refined systems that shape brands with long-term impact."
+    "question": "Quel est mon profil ?",
+    "answer": "Je suis étudiante en stylisme et modélisme à ESMOD Roubaix. Après un bac professionnel Métiers de la mode obtenu avec mention très bien et un BTS MMV, je poursuis mon Bachelor."
   },
   {
-    "question": "Why not hire an in-house designer or freelancer?",
-    "answer": "You get senior-level consistency without overhead. Fuel delivers focused, high-quality output with the flexibility and precision solo designers often can’t match."
+    "question": "Quelles techniques est-ce que je maîtrise ?",
+    "answer": "Je travaille le moulage sur mannequin, le patronage à plat, les techniques de confection, le montage, les finitions et la couture industrielle."
   },
   {
-    "question": "Are creative requests truly unlimited?",
-    "answer": "Yes—requests flow through a structured queue. Fuel handles each task with intention, ensuring every deliverable remains polished, thoughtful, and on-brand."
+    "question": "Quels outils est-ce que j’utilise ?",
+    "answer": "J’utilise notamment Lectra, Photoshop, Canva et CapCut. J’explore aussi CLO3D, la retouche et la création de supports techniques."
   },
   {
-    "question": "How fast will I receive my work?",
-    "answer": "Fuel adapts effortlessly. Whether it’s one campaign or a full system, the same clarity, craftsmanship, and refined design process applies from start to finish."
+    "question": "Quels univers nourrissent mon travail ?",
+    "answer": "Le vivant, le biomimétisme, les orchidées rares, la transformation et l’upcycling nourrissent des silhouettes organiques, structurées et contemporaines."
   },
   {
-    "question": "What if I have a single project?",
-    "answer": "Most tasks are delivered within a few days. Fuel’s streamlined workflow ensures each piece is crafted with balance, detail, and dependable turnaround."
+    "question": "Quelle opportunité est-ce que je recherche ?",
+    "answer": "Je recherche un stage de six mois afin de développer mes compétences techniques et de découvrir davantage le milieu professionnel de la mode."
   }
 ];
