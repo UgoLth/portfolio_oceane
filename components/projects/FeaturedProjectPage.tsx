@@ -8,13 +8,6 @@ type FeaturedProjectPageProps = {
   project: FeaturedProject;
 };
 
-const chapters = [
-  { href: '#apercu', label: 'PROJET', number: '01' },
-  { href: '#design', label: 'DESIGN', number: '02' },
-  { href: '#construction', label: 'MODÉLISME', number: '03' },
-  { href: '#images', label: 'IMAGES', number: '04' },
-];
-
 function ProjectRailImage({ image, quality }: { image: FeaturedProjectImage; quality?: number }) {
   return (
     <Reveal as="figure" className="spotlight-rail-item" fromY={48}>
@@ -36,13 +29,6 @@ export function FeaturedProjectPage({ project }: FeaturedProjectPageProps) {
 
         <div className="spotlight-topbar">
           <Link href="/#portfolio">← Projets</Link>
-          <nav className="spotlight-chapters" aria-label="Chapitres du projet">
-            {chapters.map((chapter) => (
-              <a href={chapter.href} key={chapter.href}>
-                <span>{chapter.label}</span><sup>{chapter.number}</sup>
-              </a>
-            ))}
-          </nav>
           <Link href="/" className="spotlight-signature">Océane Lemaître</Link>
         </div>
 
@@ -92,6 +78,17 @@ export function FeaturedProjectPage({ project }: FeaturedProjectPageProps) {
               <ProjectRailImage image={image} quality={project.slug === 'magazine' ? 95 : undefined} key={`${image.src}-${index}`} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="spotlight-download" aria-label={`Téléchargement du projet ${project.title}`}>
+        <div className="spotlight-download-inner">
+          <span>(PDF)</span>
+          <p>Découvrez le projet dans son intégralité.</p>
+          <a href={project.pdf} download>
+            <span>Télécharger le PDF</span>
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
       </section>
 

@@ -23,6 +23,7 @@ export type FeaturedProject = {
   constructionImage?: FeaturedProjectImage;
   galleryImages?: FeaturedProjectImage[];
   heroImage: string;
+  pdf: string;
   images: FeaturedProjectImage[];
 };
 
@@ -30,20 +31,21 @@ export const featuredProjects: FeaturedProject[] = [
   {
     slug: 'shooting-photo-1',
     index: '01',
-    title: 'SHOOTING PHOTO 1',
+    title: 'SHOOTING UNCODED',
     year: '2026',
     discipline: 'Direction artistique · Shooting · Retouche',
     role: 'Concept visuel, stylisme et image',
     status: 'Série photographique',
-    description: 'Une première série photographique consacrée à la silhouette, au mouvement et à la mise en scène.',
-    statement: 'SHOOTING PHOTO 1 développe une atmosphère visuelle où le stylisme, le cadrage et la lumière construisent ensemble le récit de l’image.',
+    description: 'Une vision du nouveau pirate : une silhouette upcyclée, brute et affirmée, photographiée entre végétation, eau et architecture urbaine.',
+    statement: 'SHOOTING UNCODED développe une atmosphère visuelle où le stylisme, le cadrage et la lumière construisent ensemble le récit de l’image.',
     designText: 'La recherche définit les références, l’ambiance, les poses et la relation entre la silhouette et son environnement.',
     constructionText: 'La direction du shooting et la retouche prolongent cette intention par le rythme des cadrages, la couleur et les contrastes.',
     designTitle: 'Direction artistique & image',
     constructionTitle: 'Shooting & retouche',
     heroImage: '/assets/images/shooting-photo-1-2.jpg',
+    pdf: '/assets/pdfs/shooting-photo-1.pdf',
     images: [
-      { src: '/assets/images/shooting-photo-1-2.jpg', alt: 'Image principale de Shooting photo 1' },
+      { src: '/assets/images/shooting-photo-1-2.jpg', alt: 'Image principale de Shooting Uncoded' },
     ],
     galleryImages: [
       { src: '/assets/images/shooting-photo-1-2.jpg', alt: 'Portrait en contre-plongée sous le ciel' },
@@ -55,21 +57,28 @@ export const featuredProjects: FeaturedProject[] = [
   {
     slug: 'shooting-photo-2',
     index: '02',
-    title: 'SHOOTING PHOTO 2',
+    title: 'SHOOTING',
     year: '2026',
     discipline: 'Direction artistique · Shooting · Retouche',
     role: 'Concept visuel, stylisme et image',
-    status: 'Série photographique',
-    description: 'Une seconde série photographique qui explore une direction visuelle et une mise en scène distinctes.',
-    statement: 'SHOOTING PHOTO 2 met la silhouette au centre d’un univers construit par la lumière, le décor et la précision du cadrage.',
-    designText: 'Le projet articule recherche iconographique, intention de styling et composition pour donner une identité cohérente à la série.',
-    constructionText: 'La sélection et la retouche des images unifient les tonalités et renforcent la présence de chaque silhouette.',
-    designTitle: 'Direction artistique & image',
-    constructionTitle: 'Shooting & retouche',
+    status: 'Série photographique · Euralille',
+    description: 'À Euralille, un tailleur structuré capte le mouvement, la lumière et les regards dans un flux urbain insaisissable.',
+    statement: 'SHOOTING explore la persistance rétinienne : un tailleur structuré traverse Euralille et laisse derrière lui un flux visuel, comme une empreinte fugace dans la ville.',
+    designText: 'Le flou de bougé et les traînées lumineuses matérialisent une aura magnétique autour de la silhouette. L’image saisit ce qui attire le regard juste avant de disparaître.',
+    constructionText: 'Le tailleur aux lignes affirmées, associé aux bijoux argentés et aux bottines noires, se détache de l’architecture métallique et du mouvement des passants.',
+    designTitle: 'Mouvement & persistance',
+    constructionTitle: 'Silhouette & décor',
     heroImage: '/assets/images/shooting-photo-2-featured.webp',
+    pdf: '/assets/pdfs/shooting-photo-2.pdf',
     images: [
-      { src: '/assets/images/shooting-photo-2-featured.webp', alt: 'Image principale de Shooting photo 2' },
+      { src: '/assets/images/shooting-photo-2-featured.webp', alt: 'Image principale de Shooting' },
     ],
+      galleryImages: [
+        { src: '/assets/images/shooting-photo-2-0217.jpg', alt: 'Silhouette dans le flux des passants à Euralille' },
+        { src: '/assets/images/shooting-photo-2-0239.jpg', alt: 'Tailleur photographié en mouvement dans la ville' },
+        { src: '/assets/images/shooting-photo-2-0028.jpg', alt: 'Silhouette structurée dans l’architecture urbaine' },
+        { src: '/assets/images/shooting-photo-2-0097.jpg', alt: 'Vue plongeante de la silhouette dans les escaliers' },
+      ],
   },
   {
     slug: 'interface',
@@ -88,6 +97,7 @@ export const featuredProjects: FeaturedProject[] = [
     constructionHeading: 'Du vivant au vêtement.',
     galleryTitle: 'Silhouettes & détails',
     heroImage: '/assets/images/interface-book-cover.webp',
+    pdf: '/assets/pdfs/interface.pdf',
     images: [
       { src: '/assets/images/interface-web/introduction.webp', alt: 'Introduction au concept de bien-être et de protection', fit: 'contain' },
       { src: '/assets/images/interface-web/identity.webp', alt: 'Identité visuelle et logo du projet Interface', fit: 'contain' },
@@ -121,6 +131,7 @@ export const featuredProjects: FeaturedProject[] = [
     constructionTitle: 'Collection & biomimétisme',
     galleryTitle: 'Voir autrement',
     heroImage: '/assets/images/Magazine/img1.jpg',
+    pdf: '/assets/pdfs/magazine.pdf',
     images: [
       { src: '/assets/images/Magazine/img1.jpg', alt: 'Ouverture — voir autrement', fit: 'contain' },
       { src: '/assets/images/Magazine/img37.jpg', alt: 'Silhouette inspirée des ailes', fit: 'contain' },
