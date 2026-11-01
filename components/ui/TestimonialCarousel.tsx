@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { WordReveal } from './Animation';
+import { withBasePath } from '../../lib/site-path';
 
 const slides = [
   { quote:'inutile',name:'inutile',role:'inutile',image:'man-hoodie.png',logo:'image-20.svg',portrait:'women-side-pose-512.png',projects:'inutile',satisfaction:'inutile' },
@@ -20,8 +21,8 @@ export function TestimonialCarousel({className}:{className:string}) {
   return <div className={className+' native-testimonial'} style={{width:'100%'}} aria-roledescription="carousel" aria-label="Contenu inutile">
     <div className="framer-u2xp06">
       {!small&&<div className="framer-x2rok7 testimonial-image">
-        <AnimatePresence initial={false}><motion.img key={slide.image} src={'/assets/images/'+slide.image} alt={index===0?'Man Hoodie':index===1?'Man Overshirt':'Woman'} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.5}} /></AnimatePresence>
-        <img className="testimonial-logo" src={'/assets/images/'+slide.logo} alt="" />
+        <AnimatePresence initial={false}><motion.img key={slide.image} src={withBasePath("/assets/images/")+slide.image} alt={index===0?'Man Hoodie':index===1?'Man Overshirt':'Woman'} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.5}} /></AnimatePresence>
+        <img className="testimonial-logo" src={withBasePath("/assets/images/")+slide.logo} alt="" />
       </div>}
       <div className="framer-f0yedb">
         <button className="framer-p52sbr testimonial-arrow" type="button" aria-label="Précédent" onClick={()=>go(-1)}><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="m7 1-6 6 6 6" stroke="currentColor" strokeWidth="1.8" /></svg></button>
@@ -35,7 +36,7 @@ export function TestimonialCarousel({className}:{className:string}) {
       <div className="framer-1233k5t" style={{backgroundColor:'rgba(0,0,0,.1)'}} />
       <div className="framer-39qqj8" aria-live="polite">
         <div className="framer-13ii7z1 testimonial-user">
-          <div className="framer-rgtkst"><motion.img key={slide.portrait} src={'/assets/images/'+slide.portrait} alt="" initial={{scale:1.25}} animate={{scale:1}} transition={{duration:.7}} /></div>
+          <div className="framer-rgtkst"><motion.img key={slide.portrait} src={withBasePath("/assets/images/")+slide.portrait} alt="" initial={{scale:1.25}} animate={{scale:1}} transition={{duration:.7}} /></div>
           <div className="framer-1pr9s5y"><div className="framer-1bycjc0"><p className="framer-text framer-styles-preset-q70fzl">{slide.name}</p><p className="framer-text framer-styles-preset-152twjm testimonial-role">{slide.role}</p></div></div>
         </div>
         <TestimonialStat value={slide.projects} label="inutile" detail="inutile" className="framer-1ltnmqs" />

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Project, ProjectImage } from '../../data/projects';
+import { withBasePath } from '../../lib/site-path';
 
 function ProjectFigure({
   image,
@@ -63,7 +64,7 @@ function TechnicalShowcase({ project }: { project: Project }) {
         </div>
         <a className="technical-image-link" href={project.pdf} target="_blank" rel="noreferrer">
           <Image
-            src="/assets/projects/fiche-technique/fiche-technique-tailleur.png"
+            src={withBasePath("/assets/projects/fiche-technique/fiche-technique-tailleur.png")}
             alt="Fiche technique complète du projet tailleur"
             width={1588}
             height={1126}
@@ -76,19 +77,39 @@ function TechnicalShowcase({ project }: { project: Project }) {
 }
 
 function RetouchShowcase({ project }: { project: Project }) {
-  const [campaign, architecture, city, portrait] = project.images;
-
   return (
-    <section className="project-composition composition-retouch" aria-label="Recherches de retouche photo">
+    <section className="project-composition composition-retouch" aria-label="Comparaisons avant et après retouche photo">
       <div className="composition-heading">
-        <span>Sélection d’images</span>
-        <span>Retouche photo / recherches visuelles</span>
+        <span>Avant / Après</span>
+        <span>Retouche photo / transformations</span>
       </div>
-      <div className="retouch-gallery">
-        <ProjectFigure image={campaign} number="01" className="retouch-campaign" sizes="(max-width: 809px) 100vw, 58vw" />
-        <ProjectFigure image={architecture} number="02" className="retouch-architecture" sizes="(max-width: 809px) 78vw, 32vw" />
-        <ProjectFigure image={city} number="03" className="retouch-city" sizes="(max-width: 809px) 88vw, 38vw" />
-        <ProjectFigure image={portrait} number="04" className="retouch-portrait" sizes="(max-width: 809px) 100vw, 50vw" />
+      <div className="retouch-comparisons">
+        {project.comparisons?.map((comparison, index) => (
+          <article className="retouch-comparison" key={comparison.before.src} aria-labelledby={`retouch-comparison-${index}`}>
+            <header className="retouch-comparison-heading">
+              <span>({String(index + 1).padStart(2, '0')})</span>
+              <h2 id={`retouch-comparison-${index}`}>{comparison.title}</h2>
+            </header>
+            <div className="retouch-comparison-images">
+              {([
+                { label: 'Avant', image: comparison.before },
+                { label: 'Après', image: comparison.after },
+              ]).map(({ label, image }) => (
+                <figure className="retouch-comparison-figure" key={image.src}>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={comparison.width}
+                    height={comparison.height}
+                    unoptimized
+                    sizes="(max-width: 599px) calc(100vw - 48px), (max-width: 1219px) 45vw, 554px"
+                  />
+                  <figcaption>{label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

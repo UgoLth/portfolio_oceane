@@ -3,6 +3,7 @@ import { Reveal, ScrollElement, WordReveal, Ticker } from '../ui/Animation';
 import { Header } from '../ui/Header';
 import { FAQList } from '../ui/FAQList';
 import { TestimonialCarousel } from '../ui/TestimonialCarousel';
+import { withBasePath } from '../../lib/site-path';
 
 function OceaneWordmark({ gradientId }: { gradientId: string }) {
  return <svg aria-label="Océane" role="img" viewBox="0 -30 1000 190" preserveAspectRatio="none" style={{"display":"block","width":"100%","height":"100%","overflow":"visible"} as CSSProperties}>
@@ -13,7 +14,7 @@ function OceaneWordmark({ gradientId }: { gradientId: string }) {
 
 export function Hero() {
  return <>
-<ScrollElement className="framer-1u6a2tv" id="hero" as="section" effect="hero"><Reveal className="framer-1emrrf1" as="div" fromY={0} fromScale={1.2}><div data-framer-background-image-wrapper="true" style={{"position":"absolute","borderRadius":"inherit","cornerShape":"inherit","top":"0","right":"0","bottom":"0","left":"0"} as CSSProperties}><img decoding="async" width="735" height="1108" sizes="(min-width: 1200px) 100vw, (min-width: 810px) and (max-width: 1199.98px) 100vw, (max-width: 809.98px) 100vw" srcSet="/assets/images/hero-orchid-1024.jpg 679w,/assets/images/hero-orchid.jpg 735w" src="/assets/images/hero-orchid.jpg" alt="Women in Orange BG" loading="eager" style={{"display":"block","width":"100%","height":"100%","borderRadius":"inherit","cornerShape":"inherit","objectPosition":"center","objectFit":"cover"} as CSSProperties} /></div></Reveal>
+<ScrollElement className="framer-1u6a2tv" id="hero" as="section" effect="hero"><Reveal className="framer-1emrrf1" as="div" fromY={0} fromScale={1.2}><div data-framer-background-image-wrapper="true" style={{"position":"absolute","borderRadius":"inherit","cornerShape":"inherit","top":"0","right":"0","bottom":"0","left":"0"} as CSSProperties}><img decoding="async" width="735" height="1108" sizes="(min-width: 1200px) 100vw, (min-width: 810px) and (max-width: 1199.98px) 100vw, (max-width: 809.98px) 100vw" srcSet={withBasePath("/assets/images/hero-orchid-1024.jpg 679w,/assets/images/hero-orchid.jpg 735w")} src={withBasePath("/assets/images/hero-orchid.jpg")} alt="Women in Orange BG" loading="eager" style={{"display":"block","width":"100%","height":"100%","borderRadius":"inherit","cornerShape":"inherit","objectPosition":"center","objectFit":"cover"} as CSSProperties} /></div></Reveal>
 <div className="ssr-variant"><div className="framer-wz3pqn-container"><Header /></div></div>
 <div className="framer-14t40qu" />
 <div className="framer-ej9q0"><div className="framer-1y7js4"><Reveal className="framer-1kj30u2" data-framer-component-type="RichTextContainer" as="div" fromY={10} fromScale={1}><p className="framer-text framer-styles-preset-q70fzl" dir="auto">{"Un voyage à travers mes silhouettes, mes recherches et mon univers créatif."}</p></Reveal>

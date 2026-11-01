@@ -1,3 +1,6 @@
+
+import { withBasePath } from '../lib/site-path';
+
 export type FeaturedProjectImage = {
   src: string;
   alt: string;
@@ -42,16 +45,16 @@ export const featuredProjects: FeaturedProject[] = [
     constructionText: 'La direction du shooting et la retouche prolongent cette intention par le rythme des cadrages, la couleur et les contrastes.',
     designTitle: 'Direction artistique & image',
     constructionTitle: 'Shooting & retouche',
-    heroImage: '/assets/images/shooting-photo-1-2.jpg',
-    pdf: '/assets/pdfs/shooting-photo-1.pdf',
+    heroImage: withBasePath("/assets/images/shooting-photo-1-2.jpg"),
+    pdf: withBasePath("/assets/pdfs/shooting-photo-1.pdf"),
     images: [
-      { src: '/assets/images/shooting-photo-1-2.jpg', alt: 'Image principale de Shooting Uncoded' },
+      { src: withBasePath("/assets/images/shooting-photo-1-2.jpg"), alt: 'Image principale de Shooting Uncoded' },
     ],
     galleryImages: [
-      { src: '/assets/images/shooting-photo-1-2.jpg', alt: 'Portrait en contre-plongée sous le ciel' },
-      { src: '/assets/images/shooting-photo-1-22.jpg', alt: 'Portrait au cœur de la végétation' },
-      { src: '/assets/images/shooting-photo-1-13.jpg', alt: 'Portrait en contre-plongée sous la verrière' },
-      { src: '/assets/images/shooting-photo-1-3.jpg', alt: 'Silhouette en contre-plongée' },
+      { src: withBasePath("/assets/images/shooting-photo-1-2.jpg"), alt: 'Portrait en contre-plongée sous le ciel' },
+      { src: withBasePath("/assets/images/shooting-photo-1-22.jpg"), alt: 'Portrait au cœur de la végétation' },
+      { src: withBasePath("/assets/images/shooting-photo-1-13.jpg"), alt: 'Portrait en contre-plongée sous la verrière' },
+      { src: withBasePath("/assets/images/shooting-photo-1-3.jpg"), alt: 'Silhouette en contre-plongée' },
     ],
   },
   {
@@ -68,16 +71,16 @@ export const featuredProjects: FeaturedProject[] = [
     constructionText: 'Le tailleur aux lignes affirmées, associé aux bijoux argentés et aux bottines noires, se détache de l’architecture métallique et du mouvement des passants.',
     designTitle: 'Mouvement & persistance',
     constructionTitle: 'Silhouette & décor',
-    heroImage: '/assets/images/shooting-photo-2-featured.webp',
-    pdf: '/assets/pdfs/shooting-photo-2.pdf',
+    heroImage: withBasePath("/assets/images/shooting-photo-2-featured.webp"),
+    pdf: withBasePath("/assets/pdfs/shooting-photo-2.pdf"),
     images: [
-      { src: '/assets/images/shooting-photo-2-featured.webp', alt: 'Image principale de Shooting' },
+      { src: withBasePath("/assets/images/shooting-photo-2-featured.webp"), alt: 'Image principale de Shooting' },
     ],
       galleryImages: [
-        { src: '/assets/images/shooting-photo-2-0217.jpg', alt: 'Silhouette dans le flux des passants à Euralille' },
-        { src: '/assets/images/shooting-photo-2-0239.jpg', alt: 'Tailleur photographié en mouvement dans la ville' },
-        { src: '/assets/images/shooting-photo-2-0028.jpg', alt: 'Silhouette structurée dans l’architecture urbaine' },
-        { src: '/assets/images/shooting-photo-2-0097.jpg', alt: 'Vue plongeante de la silhouette dans les escaliers' },
+        { src: withBasePath("/assets/images/shooting-photo-2-0217.jpg"), alt: 'Silhouette dans le flux des passants à Euralille' },
+        { src: withBasePath("/assets/images/shooting-photo-2-0239.jpg"), alt: 'Tailleur photographié en mouvement dans la ville' },
+        { src: withBasePath("/assets/images/shooting-photo-2-0028.jpg"), alt: 'Silhouette structurée dans l’architecture urbaine' },
+        { src: withBasePath("/assets/images/shooting-photo-2-0097.jpg"), alt: 'Vue plongeante de la silhouette dans les escaliers' },
       ],
   },
   {
@@ -96,23 +99,19 @@ export const featuredProjects: FeaturedProject[] = [
     constructionTitle: 'Collection & construction',
     constructionHeading: 'Du vivant au vêtement.',
     galleryTitle: 'Silhouettes & détails',
-    heroImage: '/assets/images/interface-book-cover.webp',
-    pdf: '/assets/pdfs/interface.pdf',
+    heroImage: withBasePath("/assets/images/interface-book-cover.webp"),
+    pdf: withBasePath("/assets/pdfs/interface.pdf"),
     images: [
-      { src: '/assets/images/interface-web/introduction.webp', alt: 'Introduction au concept de bien-être et de protection', fit: 'contain' },
-      { src: '/assets/images/interface-web/identity.webp', alt: 'Identité visuelle et logo du projet Interface', fit: 'contain' },
-      { src: '/assets/images/interface-web/silhouettes.webp', alt: 'Développement des silhouettes de la collection', fit: 'contain' },
+      { src: withBasePath("/assets/images/interface-web/introduction.webp"), alt: 'Introduction au concept de bien-être et de protection', fit: 'contain' },
+      { src: withBasePath("/assets/images/interface-web/identity.webp"), alt: 'Identité visuelle et logo du projet Interface', fit: 'contain' },
+      { src: withBasePath("/assets/images/interface-web/silhouettes.webp"), alt: 'Développement des silhouettes de la collection', fit: 'contain' },
     ],
-    constructionImage: { src: '/assets/images/interface-web/look-01.webp', alt: 'Premier look et recherche de volume', fit: 'contain' },
+    constructionImage: { src: withBasePath("/assets/images/interface-web/look-01.webp"), alt: 'Premier look et recherche de volume', fit: 'contain' },
     galleryImages: [
-      { src: '/assets/images/interface-web/moodboard.webp', alt: 'Gamme colorée et moodboard biophilie', fit: 'contain' },
-      { src: '/assets/images/interface-web/look-01.webp', alt: 'Look 01, bomber protecteur', fit: 'contain' },
-      { src: '/assets/images/interface-web/look-06.webp', alt: 'Silhouette inspirée de l’orchidée', fit: 'contain' },
-      { src: '/assets/images/interface-web/illustration.webp', alt: 'Illustration de la collection Interface', fit: 'contain' },
-      { src: '/assets/images/interface-web/research-materials.webp', alt: 'Recherche autour de la nature et sélection des matières', fit: 'contain' },
-      { src: '/assets/images/interface-web/look-08.webp', alt: 'Look 08 et volumes enveloppants', fit: 'contain' },
-      { src: '/assets/images/interface-web/look-10-technical.webp', alt: 'Look 10 et dessin technique', fit: 'contain' },
-      { src: '/assets/images/interface-web/collection-plan.webp', alt: 'Plan de collection, coloris et matières', fit: 'contain' },
+      { src: withBasePath("/assets/images/interface-gallery/interface1.png"), alt: 'Portrait entouré d’orchidées blanches, jaunes et mauves' },
+      { src: withBasePath("/assets/images/interface-gallery/interface2.png"), alt: 'Portrait sculptural inspiré par une fleur lumineuse' },
+      { src: withBasePath("/assets/images/interface-gallery/interface3.png"), alt: 'Portrait graphique composé autour des mains et du visage' },
+      { src: withBasePath("/assets/images/interface-gallery/interface4.webp"), alt: 'Silhouette finale de la collection Interface' },
     ],
   },
   {
@@ -130,18 +129,18 @@ export const featuredProjects: FeaturedProject[] = [
     designTitle: 'Recherche & narration',
     constructionTitle: 'Collection & biomimétisme',
     galleryTitle: 'Voir autrement',
-    heroImage: '/assets/images/Magazine/img1.jpg',
-    pdf: '/assets/pdfs/magazine.pdf',
+    heroImage: withBasePath("/assets/images/Magazine/img1.jpg"),
+    pdf: withBasePath("/assets/pdfs/magazine.pdf"),
     images: [
-      { src: '/assets/images/Magazine/img1.jpg', alt: 'Ouverture — voir autrement', fit: 'contain' },
-      { src: '/assets/images/Magazine/img37.jpg', alt: 'Silhouette inspirée des ailes', fit: 'contain' },
-      { src: '/assets/images/Magazine/img251.jpg', alt: 'Recherche visuelle Annihilation', fit: 'contain' },
+      { src: withBasePath("/assets/images/Magazine/img1.jpg"), alt: 'Ouverture — voir autrement', fit: 'contain' },
+      { src: withBasePath("/assets/images/Magazine/img37.jpg"), alt: 'Silhouette inspirée des ailes', fit: 'contain' },
+      { src: withBasePath("/assets/images/Magazine/img251.jpg"), alt: 'Recherche visuelle Annihilation', fit: 'contain' },
     ],
     galleryImages: [
-      { src: '/assets/images/Magazine/img1.jpg', alt: 'Ouverture — voir autrement' },
-      { src: '/assets/images/Magazine/img172.jpg', alt: 'Matière irisée portée' },
-      { src: '/assets/images/Magazine/img280.jpg', alt: 'Transparence et lumière' },
-      { src: '/assets/images/Magazine/img304.jpg', alt: 'Orchidée fantôme — silhouette finale' },
+      { src: withBasePath("/assets/images/Magazine/img1.jpg"), alt: 'Ouverture — voir autrement' },
+      { src: withBasePath("/assets/images/Magazine/img172.jpg"), alt: 'Matière irisée portée' },
+      { src: withBasePath("/assets/images/Magazine/img280.jpg"), alt: 'Transparence et lumière' },
+      { src: withBasePath("/assets/images/Magazine/img304.jpg"), alt: 'Orchidée fantôme — silhouette finale' },
     ],
   },
 ];

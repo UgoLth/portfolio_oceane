@@ -138,16 +138,17 @@ a { cursor:pointer; }
 
 .composition-retouch { background:#fff; }
 .composition-retouch .composition-heading { margin-bottom:70px; }
-.retouch-gallery { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:110px 12px; align-items:start; }
-.retouch-gallery .project-visual-frame img { object-fit:cover; }
-.retouch-campaign { grid-column:1/9; }
-.retouch-campaign .project-visual-frame { aspect-ratio:16/10; }
-.retouch-architecture { grid-column:10/13; margin-top:145px; }
-.retouch-architecture .project-visual-frame { aspect-ratio:16/10; }
-.retouch-city { grid-column:2/7; margin-top:-30px; }
-.retouch-city .project-visual-frame { aspect-ratio:4/3; }
-.retouch-portrait { grid-column:8/13; margin-top:90px; }
-.retouch-portrait .project-visual-frame { aspect-ratio:5/4; }
+.retouch-comparisons { max-width:1120px; margin:0 auto 40px; display:flex; flex-direction:column; gap:90px; }
+.retouch-comparison { width:100%; }
+.retouch-comparison:nth-child(2) { max-width:920px; align-self:flex-end; }
+.retouch-comparison:nth-child(3) { max-width:1040px; }
+.retouch-comparison-heading { padding-top:16px; margin-bottom:24px; border-top:1px solid #00000029; display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
+.retouch-comparison-heading>span { font-size:11px; }
+.retouch-comparison-heading h2 { font-size:clamp(18px,2vw,26px); font-weight:500; line-height:1.1; letter-spacing:-.7px; }
+.retouch-comparison-images { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.retouch-comparison-figure { min-width:0; margin:0; }
+.retouch-comparison-figure img { display:block; width:100%; height:auto; border-radius:6px; }
+.retouch-comparison-figure figcaption { padding-top:10px; color:#00000080; font-size:11px; line-height:1.2; }
 
 .composition-clo { background:#fff; }
 .composition-clo .composition-heading { margin-bottom:50px; }
@@ -206,17 +207,18 @@ a { cursor:pointer; }
   .technical-document-bar { min-height:44px; padding:0 6px 8px; }
   .technical-image-link img { width:100%; height:auto; }
   .composition-retouch .composition-heading { margin-bottom:42px; }
-  .retouch-gallery { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:58px 10px; }
-  .retouch-gallery .project-visual { margin:0; }
-  .retouch-campaign { grid-column:1/-1; }
-  .retouch-architecture { grid-column:3/7; margin:0; }
-  .retouch-city { grid-column:1/6; margin:0; }
-  .retouch-portrait { grid-column:2/7; margin:0; }
+  .retouch-comparisons { gap:50px; margin-bottom:24px; }
+  .retouch-comparison-heading { margin-bottom:18px; }
+  .retouch-comparison-images { gap:10px; }
   .composition-clo .composition-heading { margin-bottom:36px; }
   .clo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:36px 10px; }
   .clo-grid-item { margin:0; }
   .project-next { min-height:210px; padding:22px 24px 28px; }
   .project-next a { font-size:clamp(38px,11vw,64px); }
+}
+
+@media(max-width:599.98px) {
+  .retouch-comparison-images { grid-template-columns:1fr; gap:22px; }
 }
 
 @media(prefers-reduced-motion:reduce) {
@@ -271,7 +273,8 @@ a { cursor:pointer; }
 .spotlight-rail-image:hover img { transform:scale(1.045); }
 .spotlight-rail-image-contain:hover img { transform:scale(.97); }
 .spotlight-project--shooting-photo-1 .spotlight-image-rail,
-.spotlight-project--shooting-photo-2 .spotlight-image-rail { width:100%; max-width:560px; margin-left:auto; }
+.spotlight-project--shooting-photo-2 .spotlight-image-rail,
+.spotlight-project--interface .spotlight-image-rail { width:100%; max-width:560px; margin-left:auto; }
 .spotlight-project--shooting-photo-1 .spotlight-rail-image img,
 .spotlight-project--shooting-photo-1 .spotlight-rail-image:hover img,
 .spotlight-project--shooting-photo-2 .spotlight-rail-image img,
@@ -332,4 +335,35 @@ a { cursor:pointer; }
 @media(prefers-reduced-motion:reduce) {
   .spotlight-hero-background { animation:none; }
   .spotlight-rail-image img { transition:none; }
+}
+
+/* Footer signature */
+.framer-k6SJ4 .framer-1fk0iuz {
+  overflow:visible;
+}
+.framer-k6SJ4 .footer-wordmark {
+  color:#f2f2f2;
+  flex:none;
+  font-family:"BDO Grotesk Variable",sans-serif;
+  font-size:clamp(56px,7vw,108px);
+  font-variation-settings:"wght" 500;
+  font-weight:1000;
+  letter-spacing:-.065em;
+  line-height:.95;
+  overflow:visible;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+@media(max-width:1199.98px) {
+  .portfolio-projects-spacer { display:none !important; }
+  .framer-k6SJ4 .footer-wordmark {
+    gap:18px;
+  }
+}
+
+@media(max-width:809.98px) {
+  .framer-k6SJ4 .footer-wordmark {
+    font-size:clamp(32px,9.5vw,52px);
+  }
 }

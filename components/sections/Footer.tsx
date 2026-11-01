@@ -3,6 +3,11 @@ import { Reveal, ScrollElement, WordReveal, Ticker } from '../ui/Animation';
 import { Header } from '../ui/Header';
 import { FAQList } from '../ui/FAQList';
 import { TestimonialCarousel } from '../ui/TestimonialCarousel';
+import { withBasePath } from '../../lib/site-path';
+
+function FooterWordmark() {
+ return <a className="footer-wordmark" href={withBasePath("/")} aria-label="Retour à l’accueil">OCÉANE LEMAÎTRE</a>;
+}
 
 export function Footer() {
  return <>
@@ -33,7 +38,7 @@ export function Footer() {
 <div className="framer-19nuzoz"><div className="framer-p0o3c0" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))"} as CSSProperties} />
 <div className="framer-4arbo3" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))","transform":"rotate(90deg)"} as CSSProperties} /></div></div>
 <div className="framer-13itul5" style={{"backgroundColor":"var(--token-fe5ad1ec-ee6b-4f04-b32a-991de61143dc, rgba(255, 255, 255, 0.16))"} as CSSProperties} />
-<div className="framer-1fk0iuz"><a className="framer-lephe8 framer-ckfwy9" href="/" data-framer-page-link-current="true"><div data-framer-background-image-wrapper="true" style={{"position":"absolute","borderRadius":"inherit","cornerShape":"inherit","top":"0","right":"0","bottom":"0","left":"0"} as CSSProperties}><img decoding="async" loading="lazy" width="3195" height="501" sizes="(min-width: 1200px) calc(min(100vw - 48px, 1440px) * 0.7701), (max-width: 809.98px) min(100vw - 48px, 1440px), (min-width: 810px) and (max-width: 1199.98px) min(100vw - 48px, 1440px)" srcSet="/assets/images/fuel-x-white-512.png 512w,/assets/images/fuel-x-white-1024.png 1024w,/assets/images/fuel-x-white-2048.png 2048w,/assets/images/fuel-x-white.png 3195w" src="/assets/images/fuel-x-white.png" alt="" style={{"display":"block","width":"100%","height":"100%","borderRadius":"inherit","cornerShape":"inherit","objectPosition":"center","objectFit":"cover"} as CSSProperties} /></div></a>
+<div className="framer-1fk0iuz"><FooterWordmark />
 <div className="framer-14jos4c"><div className="framer-zop6ys" data-framer-component-type="RichTextContainer" style={{"--framer-link-text-color":"rgb(0, 153, 255)","--framer-link-text-decoration":"underline","transform":"none"} as CSSProperties}><p className="framer-text framer-styles-preset-q70fzl">{"© 2026"}</p></div>
 <div className="framer-gnxkse"><div className="framer-vq47zg" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
 <div className="framer-ytpezv" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
@@ -73,7 +78,7 @@ export function Footer() {
 <div className="framer-19nuzoz"><div className="framer-p0o3c0" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))"} as CSSProperties} />
 <div className="framer-4arbo3" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))","transform":"rotate(90deg)"} as CSSProperties} /></div></div>
 <div className="framer-13itul5" style={{"backgroundColor":"var(--token-fe5ad1ec-ee6b-4f04-b32a-991de61143dc, rgba(255, 255, 255, 0.16))"} as CSSProperties} />
-<div className="framer-1fk0iuz"><a className="framer-lephe8 framer-ckfwy9" href="/" data-framer-page-link-current="true"><div data-framer-background-image-wrapper="true" style={{"position":"absolute","borderRadius":"inherit","cornerShape":"inherit","top":"0","right":"0","bottom":"0","left":"0"} as CSSProperties}><img decoding="async" loading="lazy" width="3195" height="501" sizes="(min-width: 1200px) calc(min(100vw - 48px, 1440px) * 0.7701), (max-width: 809.98px) min(100vw - 48px, 1440px), (min-width: 810px) and (max-width: 1199.98px) min(100vw - 48px, 1440px)" srcSet="/assets/images/fuel-x-white-512.png 512w,/assets/images/fuel-x-white-1024.png 1024w,/assets/images/fuel-x-white-2048.png 2048w,/assets/images/fuel-x-white.png 3195w" src="/assets/images/fuel-x-white.png" alt="" style={{"display":"block","width":"100%","height":"100%","borderRadius":"inherit","cornerShape":"inherit","objectPosition":"center","objectFit":"cover"} as CSSProperties} /></div></a>
+<div className="framer-1fk0iuz"><FooterWordmark />
 <div className="framer-14jos4c"><div className="framer-zop6ys" data-framer-component-type="RichTextContainer" style={{"--framer-link-text-color":"rgb(0, 153, 255)","--framer-link-text-decoration":"underline","transform":"none"} as CSSProperties}><p className="framer-text framer-styles-preset-q70fzl">{"© 2026"}</p></div>
 <div className="framer-gnxkse"><div className="framer-vq47zg" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
 <div className="framer-ytpezv" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
@@ -114,7 +119,7 @@ export function Footer() {
 <div className="framer-19nuzoz"><div className="framer-p0o3c0" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))"} as CSSProperties} />
 <div className="framer-4arbo3" style={{"backgroundColor":"var(--token-3276f804-88ae-458e-ac7a-7ed927b3c137, rgb(209, 225, 232))","transform":"rotate(90deg)"} as CSSProperties} /></div></div>
 <div className="framer-13itul5" style={{"backgroundColor":"var(--token-fe5ad1ec-ee6b-4f04-b32a-991de61143dc, rgba(255, 255, 255, 0.16))"} as CSSProperties} />
-<div className="framer-1fk0iuz"><a className="framer-lephe8 framer-ckfwy9" href="/" data-framer-page-link-current="true"><div data-framer-background-image-wrapper="true" style={{"position":"absolute","borderRadius":"inherit","cornerShape":"inherit","top":"0","right":"0","bottom":"0","left":"0"} as CSSProperties}><img decoding="async" loading="lazy" width="3195" height="501" sizes="(min-width: 1200px) calc(min(100vw - 48px, 1440px) * 0.7701), (max-width: 809.98px) min(100vw - 48px, 1440px), (min-width: 810px) and (max-width: 1199.98px) min(100vw - 48px, 1440px)" srcSet="/assets/images/fuel-x-white-512.png 512w,/assets/images/fuel-x-white-1024.png 1024w,/assets/images/fuel-x-white-2048.png 2048w,/assets/images/fuel-x-white.png 3195w" src="/assets/images/fuel-x-white.png" alt="" style={{"display":"block","width":"100%","height":"100%","borderRadius":"inherit","cornerShape":"inherit","objectPosition":"center","objectFit":"cover"} as CSSProperties} /></div></a>
+<div className="framer-1fk0iuz"><FooterWordmark />
 <div className="framer-14jos4c"><div className="framer-zop6ys" data-framer-component-type="RichTextContainer" style={{"--framer-link-text-color":"rgb(0, 153, 255)","--framer-link-text-decoration":"underline","transform":"none"} as CSSProperties}><p className="framer-text framer-styles-preset-q70fzl">{"© 2026"}</p></div>
 <div className="framer-gnxkse"><div className="framer-vq47zg" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
 <div className="framer-ytpezv" style={{"backgroundColor":"rgba(255, 255, 255, 0.5)"} as CSSProperties} />
