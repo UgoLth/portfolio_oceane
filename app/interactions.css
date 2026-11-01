@@ -122,9 +122,10 @@ a { cursor:pointer; }
 .dap-grid .project-visual-frame { aspect-ratio:3/4; background:#fff; }
 
 .composition-technical { padding:50px; background:#fff; display:grid; grid-template-columns:minmax(160px,210px) minmax(0,1fr); gap:30px; align-items:start; }
+.technical-documents { background:#fff; }
 .technical-aside { min-height:620px; padding:18px 0 0; border-top:1px solid #00000029; display:flex; flex-direction:column; position:sticky; top:24px; }
 .technical-aside>span { font-size:11px; font-weight:700; }
-.technical-aside>p { margin-top:34px; font-size:clamp(44px,5vw,78px); font-weight:400; line-height:.85; letter-spacing:-3px; }
+.technical-aside>h2 { margin:34px 0 0; font-size:clamp(32px,3vw,48px); font-weight:400; line-height:.95; letter-spacing:-1.8px; overflow-wrap:anywhere; }
 .technical-keywords { margin-top:auto; display:flex; flex-direction:column; }
 .technical-keywords span { padding:12px 0; border-top:1px solid #00000029; font-size:12px; }
 .technical-aside>a { margin-top:28px; padding:15px 18px; background:#111; color:#fff; font-size:12px; font-weight:700; text-decoration:none; display:flex; justify-content:space-between; }
@@ -155,6 +156,12 @@ a { cursor:pointer; }
 .clo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:50px 12px; }
 .clo-grid-item .project-visual-frame { aspect-ratio:1; background:#f7f7f7; }
 .clo-grid-item .project-visual-frame img { object-fit:contain; }
+
+.composition-modelisme { background:#fff; }
+.composition-modelisme .composition-heading { margin-bottom:50px; }
+.modelisme-grid { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px 12px; }
+.modelisme-grid-item .project-visual-frame { aspect-ratio:3/4; border-radius:6px; background:#fff; }
+.modelisme-grid-item .project-visual-frame img { object-fit:contain; }
 
 .project-next { min-height:280px; padding:28px 50px 36px; background:#111; color:#fff; display:flex; flex-direction:column; justify-content:space-between; }
 .project-next>span { font-size:12px; font-weight:1000; }
@@ -200,7 +207,7 @@ a { cursor:pointer; }
   .dap-grid .project-visual { width:100%; margin:0 0 52px; }
   .composition-technical { display:block; padding:24px; }
   .technical-aside { min-height:0; padding-top:12px; position:static; }
-  .technical-aside>p { margin-top:24px; font-size:50px; }
+  .technical-aside>h2 { margin-top:24px; font-size:42px; }
   .technical-keywords { margin-top:46px; }
   .technical-aside>a { margin:26px 0 36px; }
   .technical-document { padding:6px; }
@@ -213,12 +220,16 @@ a { cursor:pointer; }
   .composition-clo .composition-heading { margin-bottom:36px; }
   .clo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:36px 10px; }
   .clo-grid-item { margin:0; }
+  .composition-modelisme .composition-heading { margin-bottom:36px; }
+  .modelisme-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 12px; }
+  .modelisme-grid-item { margin:0; }
   .project-next { min-height:210px; padding:22px 24px 28px; }
   .project-next a { font-size:clamp(38px,11vw,64px); }
 }
 
 @media(max-width:599.98px) {
   .retouch-comparison-images { grid-template-columns:1fr; gap:22px; }
+  .modelisme-grid { max-width:460px; grid-template-columns:1fr; }
 }
 
 @media(prefers-reduced-motion:reduce) {

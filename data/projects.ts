@@ -15,6 +15,12 @@ export type RetouchComparison = {
   after: ProjectImage;
 };
 
+export type TechnicalDocument = {
+  title: string;
+  topics: string[];
+  image: ProjectImage;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -24,8 +30,37 @@ export type Project = {
   cover?: string;
   images: ProjectImage[];
   comparisons?: RetouchComparison[];
+  documents?: TechnicalDocument[];
   pdf?: string;
 };
+
+const technicalDocuments: TechnicalDocument[] = [
+  {
+    title: 'Pantalon',
+    topics: ['Volumes', 'Matières', 'Construction'],
+    image: { src: withBasePath('/assets/projects/fiche-technique/fiche-book-01.webp'), alt: 'Fiche technique du pantalon à volume froncé' },
+  },
+  {
+    title: 'Bomber',
+    topics: ['Volumes', 'Matières', 'Finitions'],
+    image: { src: withBasePath('/assets/projects/fiche-technique/fiche-book-02.webp'), alt: 'Fiche technique du bomber oversize et de ses manches froncées' },
+  },
+  {
+    title: 'Body',
+    topics: ['Découpes', 'Matières', 'Assemblage'],
+    image: { src: withBasePath('/assets/projects/fiche-technique/fiche-book-03.webp'), alt: 'Fiche technique du body à manches longues et découpes froncées' },
+  },
+  {
+    title: 'Tailleur',
+    topics: ['Construction', 'Matières', 'Finitions'],
+    image: { src: withBasePath('/assets/projects/fiche-technique/fiche-tailleur.webp'), alt: 'Fiche technique de la veste tailleur croisée' },
+  },
+  {
+    title: 'Plan de collection',
+    topics: ['Silhouettes', 'Coloris', 'Matières'],
+    image: { src: withBasePath('/assets/projects/fiche-technique/plan-de-collection.webp'), alt: 'Plan de collection Interface avec silhouettes, coloris et matières' },
+  },
+];
 
 const retouchComparisons: RetouchComparison[] = [
   {
@@ -74,9 +109,10 @@ export const projects: Project[] = [
     description:
       'Traduire une intention créative en informations précises pour construire et produire le vêtement.',
     details:
-      'Fiche technique du projet tailleur : vues, détails de montage, proportions et indications nécessaires à la réalisation.',
-    images: [],
-    pdf: withBasePath("/assets/projects/fiche-technique/fiche-technique-tailleur.pdf"),
+      'Fiches techniques du pantalon, du bomber, du body et du tailleur, accompagnées du plan de collection : vues, matières, construction et finitions.',
+    cover: technicalDocuments[0].image.src,
+    images: technicalDocuments.map(({ image }) => image),
+    documents: technicalDocuments,
   },
   {
     slug: 'retouche-photo',
@@ -106,6 +142,27 @@ export const projects: Project[] = [
       { src: withBasePath("/assets/projects/clo3d/look-02.png"), alt: 'Deuxième proposition de silhouette CLO3D' },
       { src: withBasePath("/assets/projects/clo3d/matelasser.png"), alt: 'Détail de matière matelassée dans CLO3D' },
       { src: withBasePath("/assets/projects/clo3d/exercice-custom.png"), alt: 'Exercice de personnalisation dans CLO3D' },
+    ],
+  },
+  {
+    slug: 'modelisme',
+    title: 'MODÉLISME',
+    label: 'Patronage & construction',
+    description:
+      'Du patron au vêtement, construire la silhouette par le travail des volumes, des découpes et des détails.',
+    details:
+      'Recherches sur mannequin, patronage, toiles de tailleur et réalisations de vestes : une sélection de pièces et d’étapes de construction.',
+    cover: withBasePath('/assets/projects/modelisme/modelisme-01.webp'),
+    images: [
+      { src: withBasePath('/assets/projects/modelisme/modelisme-01.webp'), alt: 'Bomber bicolore sur mannequin', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-02.webp'), alt: 'Bomber — détail de la manche et de la poche', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-04.webp'), alt: 'Veste texturée — vue de face', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-03.webp'), alt: 'Veste texturée — détail de la manche', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-05.webp'), alt: 'Tailleur — recherche de patronage à plat', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-06.webp'), alt: 'Tailleur — toile sur mannequin', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-07.webp'), alt: 'Tailleur — placement des découpes et des poches', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-08.webp'), alt: 'Tailleur — ajustement du revers sur la toile', portrait: true },
+      { src: withBasePath('/assets/projects/modelisme/modelisme-09.webp'), alt: 'Tailleur — vue de profil et construction de l’épaule', portrait: true },
     ],
   },
 ];
