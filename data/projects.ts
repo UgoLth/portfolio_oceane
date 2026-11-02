@@ -171,6 +171,15 @@ export const projects: Project[] = [
       { src: withBasePath('/assets/projects/modelisme/modelisme-09.webp'), alt: 'Tailleur — répartition de l’embu de la manche', portrait: true },
     ],
   },
+  {
+  slug: 'books',
+  title: 'BOOKS',
+  label: 'Books & éditions',
+  description: 'Retrouvez mes projets dans leur intégralité, à feuilleter ou à télécharger.',
+  details: 'Shooting Uncoded, Shooting, Interface, Magazine et Uncoded : tous mes books réunis dans une même sélection.',
+  cover: withBasePath('/assets/images/book-oceane-lemaitre-cover.webp'),
+  images: [],
+  },
 ];
 
 export function getProject(slug: string) {

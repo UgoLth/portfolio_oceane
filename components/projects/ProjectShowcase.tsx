@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { books } from '../../data/books';
 import type { Project, ProjectImage } from '../../data/projects';
 
 function ProjectFigure({
@@ -179,9 +180,38 @@ function ModelismeShowcase({ project }: { project: Project }) {
 }
 
 export function ProjectShowcase({ project }: { project: Project }) {
+  if (project.slug === 'books') return <BooksShowcase />;
   if (project.slug === 'dap') return <DapShowcase project={project} />;
   if (project.slug === 'fiche-technique') return <TechnicalShowcase project={project} />;
   if (project.slug === 'retouche-photo') return <RetouchShowcase project={project} />;
   if (project.slug === 'modelisme') return <ModelismeShowcase project={project} />;
   return <CloShowcase project={project} />;
+}
+
+function BooksShowcase() {
+  return (
+    <section className="project-composition composition-books" aria-label="Tous les books en PDF">
+      <div className="composition-heading">
+        <span>Les projets complets</span>
+        <span>{String(books.length).padStart(2, '0')} books / PDF</span>
+      </div>
+      <div className="books-grid">
+        {books.map((book, index) => (
+          <article className="book-card" key={book.pdf}>
+            <a className="book-cover" href={book.pdf} target="_blank" rel="noreferrer" aria-label={`Consulter le book ${book.title}`}>
+              <Image src={book.cover} alt={`Aperçu du book ${book.title}`} width={1000} height={1000} sizes="(max-width: 599px) 100vw, (max-width: 999px) 50vw, 33vw" />
+            </a>
+            <div className="book-heading">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h2>{book.title}</h2>
+            </div>
+            <div className="book-actions">
+              <a href={book.pdf} target="_blank" rel="noreferrer" aria-label={`Consulter ${book.title}`}>Consulter <span aria-hidden="true">↗</span></a>
+              <a href={book.pdf} download aria-label={`Télécharger le PDF ${book.title}`}>Télécharger le PDF <span aria-hidden="true">↓</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
